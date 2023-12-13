@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway:ital,wght@0,900;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: rgb(2, 27, 5);
+    
+}
+
+h1{
+    font-size: 6vw;
+    color: #e8f2eb;
+}
+
+.header{
+    width: 100vw;
+    height: 100px;
+    padding: 5px 10%;
+    background-color: rgb(222, 222, 222);
+    position: fixed;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+
+}
+
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .nav_links{
+    list-style: none;
+
+}
+
+.header .nav_links li {
+    display: inline-block;
+    transition: .3s;
+    padding: 0px 20px;
+    border-radius: 50px;
+}
+
+.header .nav_links a{
+    font-size: 600;
+    color:rgb(3, 40, 25);
+    text-decoration: none;
+}
+
+.header .btn button{
+    margin-left: 20px;
+    font-weight: 600;
+    color: rgb(222, 222, 222);
+    padding: 9px 25px;
+    background-color: rgb(50, 102, 70);
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.fondo_image{
+    max-width: 100%;
+    height: auto;
+}
+#cajita {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #091c0f;
+    border-radius: 30px;
+}
+
+#cajita .item1 {
+    display: flex;
+    padding: 20px;
+    border: 3px solid beige;
+    margin-bottom: 10px; /* Añadir margen inferior para separar del enlace */
+}
+
+#cajita .item2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(241, 220, 195);
+    color: #316b42;
+    font-size: large;
+    padding: 10px 30px;
+    border-radius: 60px;
+}
