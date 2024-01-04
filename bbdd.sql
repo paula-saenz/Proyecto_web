@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `21842142-christmas`
+-- Base de datos: 'donaciones'
 --
 
 -- --------------------------------------------------------
@@ -34,20 +34,20 @@ CREATE TABLE IF NOT EXISTS usuarios (
     apellidos VARCHAR(100) NOT NULL,
     edad INT NOT NULL,
     direccion VARCHAR(255) NOT NULL,
-    contrasena VARCHAR(255) NOT NULL,
-    privilegios INT NOT NULL DEFAULT 0
+    contrasena VARCHAR(255) NOT NULL
 );
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cartas`
+-- Estructura de tabla para la tabla `donaciones`
 --
 
 CREATE TABLE IF NOT EXISTS donaciones (
-    usuario VARCHAR(50) NOT NULL,
-    cantidad INT NOT NULL,
-    PRIMARY KEY (usuario),
-    FOREIGN KEY (usuario) REFERENCES usuarios(username)
+    id_donacion INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario VARCHAR(50) NOT NULL,
+    cantidad_donada INT NOT NULL,
+    fecha_donacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(username)
 );
 

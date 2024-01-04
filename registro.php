@@ -2,7 +2,6 @@
 
 session_start();
 
-
 define("DB_SERVER", "localhost");
 define("DB_USER", "root");
 define("DB_PASS", "");
@@ -16,7 +15,8 @@ if (!$connection) {
     die("La conexión con la BBDD ha fallado: " . mysqli_connect_error());
 }
 
-function find_user_by_username($username, $connection) {
+function find_user_by_username($username, $connection)
+{
     $safe_username = mysqli_real_escape_string($connection, $username);
 
     $query  = "SELECT * ";
@@ -37,12 +37,11 @@ function find_user_by_username($username, $connection) {
     }
 }
 
-function attempt_login($username, $connection) {
+function attempt_login($username, $connection)
+{
     $user = find_user_by_username($username, $connection);
     return ($user) ? $user : false;
 }
-
-
 
 if (isset($_POST['name'], $_POST['apellidos'], $_POST['edad'], $_POST['direccion'], $_POST['username'], $_POST['password'])) {
     $name = $_POST["name"];
@@ -62,26 +61,20 @@ if (isset($_POST['name'], $_POST['apellidos'], $_POST['edad'], $_POST['direccion
         // Encriptar la contraseña
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Definir el nivel de privilegios (0 para usuario normal, 1 para Melchor, Gaspar o Baltasar)
-        $privilegios = in_array($username, ['Melchor', 'Gaspar', 'Baltasar']) ? 1 : 0;
-
         // Insertar el nuevo usuario en la base de datos
-        $query  = "INSERT INTO usuarios (nombre, apellidos, edad, direccion, username, contrasena, privilegios)";
-        $query .= " VALUES ('$name', '$apellidos', $edad, '$direccion', '$username', '$hashed_password', $privilegios)";
+        $query  = "INSERT INTO usuarios (nombre, apellidos, edad, direccion, username, contrasena)";
+        $query .= " VALUES ('$name', '$apellidos', $edad, '$direccion', '$username', '$hashed_password')";
 
         $result = mysqli_query($connection, $query);
 
         if ($result) {
-            header("Location: inicio.html");
+            header("Location: dashboard.html");
             exit();
         } else {
             die("Database query failed. " . mysqli_error($connection));
         }
     }
 }
-
-
-
 
 // 5. Cerrar conexión con la base de datos
 mysqli_close($connection);

@@ -20,7 +20,7 @@
             <li class="item"><a href="#contenido"> <b>Quienes somos</b> </a></li>
             <li class="item"><a href="#contenido3"> <b>Nuestro Bosque</b> </a></li>
             <li class="item"><a href="login.html"> <b>Login</b> </a></li>
-            <li class="btn"><a href="#contenido5"><b> DONAR AHORA </b></a></li>
+            <li class="btn" id="donarBtn"><a href="dashboard.html"><b> DONAR AHORA </b></a></li>
         </ul>
     </header>
 
@@ -51,5 +51,17 @@
     </div>
     
         
+    <script>
+        document.getElementById("donarBtn").addEventListener("click", function (event) {
+            var usuarioIniciado = true; 
+
+            if (!usuarioIniciado) {
+                event.preventDefault();
+                alert("Debes iniciar sesión para donar.");
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+
 <body>       
 <html>

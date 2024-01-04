@@ -24,7 +24,7 @@ function find_user_by_username($username, $connection)
     $query .= "FROM usuarios ";
     $query .= "WHERE username = '$safe_username' ";
     $query .= "LIMIT 1";
-    /*echo "$query <br>";*/
+
     $user_set = mysqli_query($connection, $query);
 
     if (!$user_set) {
@@ -63,15 +63,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $_SESSION['username'] = $username;
 
             // Verificar privilegios
-            $privilegios = $found_user["privilegios"];
-            if ($privilegios == 1) {
-                // Usuario con privilegios
-                header("Location: reyes.html");
-               
-            } else {
-                // Usuario normal
-                header("Location: dashboard.html");
-            }
+            header("Location: dashboard.html"); // redireccionar a dashboard
             exit();
         } else {
             header("Location: error_login.php");
