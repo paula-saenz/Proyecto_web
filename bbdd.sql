@@ -29,13 +29,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS usuarios (
-    username VARCHAR(50) PRIMARY KEY,
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     edad INT NOT NULL,
     direccion VARCHAR(255) NOT NULL,
-    contrasena VARCHAR(255) NOT NULL
+    contrasena VARCHAR(255) NOT NULL,
+    arboles_plantados INT DEFAULT 0
 );
+
+
 
 -- --------------------------------------------------------
 
@@ -45,9 +49,10 @@ CREATE TABLE IF NOT EXISTS usuarios (
 
 CREATE TABLE IF NOT EXISTS donaciones (
     id_donacion INT AUTO_INCREMENT PRIMARY KEY,
-    id_usuario VARCHAR(50) NOT NULL,
+    id_usuario INT NOT NULL,
     cantidad_donada INT NOT NULL,
     fecha_donacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(username)
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    INDEX (id_usuario)
 );
 

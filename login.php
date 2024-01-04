@@ -63,10 +63,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $_SESSION['username'] = $username;
 
             // Verificar privilegios
-            header("Location: dashboard.html"); // redireccionar a dashboard
+            header("Location: dashboard.php"); // redireccionar a dashboard.php
             exit();
         } else {
-            header("Location: error_login.php");
+            header("Location: error_login.html");
             exit();
         }
     } else {
