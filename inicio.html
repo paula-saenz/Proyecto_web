@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforestación</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="inicio.html">
+            <img src="imagenes/logo.png" class="logo" >
+        </a> 
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="imagenes/menu.png" alt="menu desplegable" class="menu-icono">
+        </label>
+        <ul class="menu">
+            <li class="item"><a href="inicio.html"> <b>Inicio</b> </a></li>
+            <li class="item"><a href="#contenido"> <b>Quienes somos</b> </a></li>
+            <li class="item"><a href="#contenido3"> <b>Nuestro Bosque</b> </a></li>
+            <li class="item"><a href="login.html"> <b>Login</b> </a></li>
+            <li class="btn" id="donarBtn"><a href="dashboard.html"><b> DONAR AHORA </b></a></li>
+        </ul>
+    </header>
+
+    <div class="banner">
+        <div id="cajita">
+            <h1 class="item1">SYNERGY-M</h1>
+            <a href="#contenido" class="item2">Empieza</a>
+        </div>
+    </div>
+
+    <div id="contenido">
+        <div class="cajas_texto">
+            <h1>¿QUIÉNES SOMOS?</h1>
+            <p  class="texto">¡Somos un apasionado grupo de desarrolladores con un objetivo claro: 
+                mejorar la ciudad de Madrid a través de la reforestación de sus áreas urbanas menos arboladas. 
+                Conscientes de los desafíos ambientales que enfrenta la ciudad, desde el aumento de las temperaturas
+                en verano hasta el frío invernal, estamos comprometidos en contribuir a la lucha 
+                contra el calentamiento global y crear un entorno más sostenible. <br><br>
+                Creemos que la reintroducción de árboles no solo embellecerá la ciudad, 
+                sino que también tendrá un impacto positivo en la calidad de vida de sus habitantes, 
+                proporcionando sombra, mejorando la calidad del aire y fomentando un equilibrio natural. 
+                Juntos, estamos dedicados a hacer de Madrid un lugar más verde y saludable para las 
+                generaciones venideras.</p>
+        </div>
+        <div class="imagenes">
+            <img src="imagenes/reforestacion.jpg" alt="arboles" style="width: 400px; height: auto; padding-top: 80px;">
+        </div>
+    </div>
+    
+        
+    <script>
+        document.getElementById("donarBtn").addEventListener("click", function (event) {
+            var usuarioIniciado = true; 
+
+            if (!usuarioIniciado) {
+                event.preventDefault();
+                alert("Debes iniciar sesión para donar.");
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+
+<body>       
+<html>
