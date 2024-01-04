@@ -21,7 +21,7 @@
             <li class="item"><a href="#contenido"> <b>Quienes somos</b> </a></li>
             <li class="item"><a href="#contenido3"> <b>Nuestro Bosque</b> </a></li>
             <li class="item"><a href="login.html"> <b>Login</b> </a></li>
-            <li class="btn"><a href="#contenido5"><b> DONAR AHORA </b></a></li>
+            <li class="btn" id="donarBtn"><a href="dashboard.php"><b> DONAR AHORA </b></a></li>
         </ul>
     </header>
 
@@ -61,5 +61,23 @@
             </form>
         </div>
     </div>
+
+    
+    <script>
+        document.getElementById("donarBtn").addEventListener("click", function (event) {
+            fetch('check_session.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.loggedIn) {
+                        console.log("Usuario inició sesión, permitir donación.");
+                    } else {
+                        event.preventDefault();
+                        alert("Debes iniciar sesión para donar.");
+                        window.location.href = "login.html";
+                    }
+                })
+                .catch(error => console.error('Error al verificar sesión:', error));
+        });
+    </script>
 </body>
 </html>

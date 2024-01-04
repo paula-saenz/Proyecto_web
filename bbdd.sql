@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 CREATE TABLE IF NOT EXISTS donaciones (
     id_donacion INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
-    cantidad_donada INT NOT NULL,
+    cantidad_donada DECIMAL(10, 2) NOT NULL,
     fecha_donacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
     INDEX (id_usuario)

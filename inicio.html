@@ -20,7 +20,7 @@
             <li class="item"><a href="#contenido"> <b>Quienes somos</b> </a></li>
             <li class="item"><a href="nuestro_bosque.html"> <b>Nuestro Bosque</b> </a></li>
             <li class="item"><a href="login.html"> <b>Login</b> </a></li>
-            <li class="btn" id="donarBtn"><a href="dashboard.html"><b> DONAR AHORA </b></a></li>
+            <li class="btn" id="donarBtn"><a href="dashboard.php"><b> DONAR AHORA </b></a></li>
         </ul>
     </header>
 
@@ -57,10 +57,8 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.loggedIn) {
-                        // Usuario ha iniciado sesión, continuar con la donación
                         console.log("Usuario inició sesión, permitir donación.");
                     } else {
-                        // Usuario no ha iniciado sesión, prevenir la acción y redirigir a la página de inicio de sesión
                         event.preventDefault();
                         alert("Debes iniciar sesión para donar.");
                         window.location.href = "login.html";

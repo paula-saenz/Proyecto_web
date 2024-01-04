@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DONAR</title>
+    <title>Success</title>
     <link rel="stylesheet" href="css/donar.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -25,31 +25,18 @@
         </ul>
     </header>
 
-    <div class="message"> Iniciar Sesión </div>
-    <div class="flex-container">
-        <div class="login-container">
-            <header>
-                <div id="head_title" class="carta">
-                    <h3>¡Haz tu donacion!</h3>
-                </div>
-            </header>
+    <div id="contenido">
+        <div class="cajas_texto">
+            <h1>¡Has Donado!</h1>
+            <p  class="texto">¡Muchas gracias por tu donacion! <br><br>
+            Nos has ayudado a acercarnos a nuestro objetivo de 5.000 euros</p>
 
-            <form action="donar.php" method="post">           
-              <div class="container">
-                <span for="cantidad_donada"><b>Cantidad a donar (euros)</b></span>
-                <input type="number" step="0.01" placeholder="Ingresa la cantidad" name="cantidad_donada" required>
-            
-              </div>
-          
-              <div class="container">
-                <button type="submit">Donar</button>
-                <p></p>
-
-                <button type="reset" class="cancelbtn">Cancelar</button>
-            </div>
-          </form>
+            <div><ul><li class="bye"><a href="dashboard.php"><b> Volver </b></a></li></ul></div>
         </div>
+
+        
     </div>
+
     
 </body>
 </html>

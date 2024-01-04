@@ -191,15 +191,16 @@ label{
 }
 
 h2{
-    padding: 10px 24px;
+    padding: 50px;
     border-radius: 30px;
     background-color: rgb(222, 222, 222);
     font-weight: 600;
     cursor: pointer;
+    margin: auto;
 }
 
 h2:hover{
-    background-color: rgb(97, 117, 98);
+    background-color: rgb(97, 106, 117);
 
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
             <li class="item"><a href="#contenido"> <b>Quienes somos</b> </a></li>
             <li class="item"><a href="#contenido3"> <b>Nuestro Bosque</b> </a></li>
             <li class="item"><a href="login.html"> <b>Login</b> </a></li>
-            <li class="btn"><a href="#contenido5"><b> DONAR AHORA </b></a></li>
+            <li class="btn"><a href="dashboard.php"><b> DONAR AHORA </b></a></li>
         </ul>
     </header>
 
@@ -36,10 +36,8 @@
             define("DB_PASS", "");
             define("DB_NAME", "donaciones");
 
-            // 1. Crear conexión con la BBDD
             $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
-            // Si hay un error, imprimimos la descripción del error y el número de error generado.
             if (mysqli_connect_errno()) {
                 die("La conexión con la BBDD ha fallado: " .
                     mysqli_connect_error() .
@@ -59,18 +57,26 @@
                 echo "<p class='texto'>¡Bienvenido a tu panel de donaciones! Aún no has realizado donaciones. ¡Únete y contribuye a nuestra causa!</p>";
             }
             ?>
+                        <div><ul><li class="bye"><a href="cerrar_sesion.php"><b> Cerrar Sesión </b></a></li></ul></div>    
+
         </div>
 
         <div>
-            <h2><a href="donar.html">QUIERO DONAR</a></h2>
+        <div>
+                <h2><a href="donar.html">QUIERO DONAR</a></h2>
+            </div>
+
 
         </div>
+
+
+
     </div>
 
 
-    <a href=" "></a>
-    
-    <div><ul><li class="bye"><a href="cerrar_sesion.php"><b> Cerrar Sesión </b></a></li></ul></div>    
+
+
+
     
     
     
