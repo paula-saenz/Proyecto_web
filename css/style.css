@@ -3,12 +3,17 @@
 
 *{
     box-sizing: border-box;
-    max-width: 300vh;    /*Que no salga linea blanca en el lado derecho*/
+    /*width: 100%;    /*Que no salga linea blanca en el lado derecho
+    height: 100%;*/
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
     list-style: none;
+}
+
+body{
+    width: 100%;    /*Que no salga linea blanca en el lado derecho*/
+    height: 100%;
 }
 
 
@@ -25,7 +30,7 @@ h1{
 }
 
 #header{
-    width: 100vw;
+    width: 100%;
     position: fixed;
     display: flex;
     justify-content:space-between;
