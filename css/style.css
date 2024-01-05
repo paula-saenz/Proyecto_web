@@ -73,6 +73,7 @@ label{
     background-color: rgb(222, 222, 222);
     font-weight: 600;
     cursor: pointer;
+    transition: 0.6s;
 }
 
 .btn:hover{
@@ -106,8 +107,7 @@ label{
 
 #cajita .item1{
     display: flex;
-    background-color: #102c09;
-    opacity: 0.95;
+    background-color: #102c09;;
     padding: 50px;
     border: 3px solid rgb(220, 245, 221);
 }
@@ -123,14 +123,16 @@ label{
     font-size: large;
     padding: 10px 30px;
     border-radius: 60px;
+    opacity: 0.8;
 }
 
 #cajita .item2:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #102c09;
-    color: rgb(146, 165, 147);
+    /*background-color: #102c09;
+    color: rgb(146, 165, 147);*/
+    opacity: 1;
     font-size: large;
     padding: 10px 30px;
     border-radius: 60px;
