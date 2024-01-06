@@ -24,7 +24,7 @@ a {
 }
 
 h1{
-    font-size: 5vw;
+    font-size: 5vh;
     color: #e8f2eb;
     padding: 10px 0 ;
 }
@@ -66,6 +66,8 @@ h1{
 
 .menu-icono{
     height: 80px;
+    display: flex;
+    margin-right: 10vh;
 }
 
 label{
