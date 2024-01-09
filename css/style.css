@@ -23,6 +23,7 @@ a {
     text-decoration: none;
 }
 
+
 h1{
     font-size: 5vh;
     color: #e8f2eb;
@@ -57,7 +58,8 @@ h1{
     margin:0 15px;
     font-size: 18px;
     font-weight: 600;
-    color:rgb(3, 23, 15);
+    color: rgb(2, 27, 5);
+
 }
 
 #menu{
@@ -90,7 +92,20 @@ label{
 
 }
 
+.bye{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    margin: auto;
+}
 
+.bye:hover {
+    background-color: #8ab898;
+}
 
 .banner{
     background-image: url("../imagenes/arvoles.jpg");
@@ -185,6 +200,20 @@ label{
     color: rgb(9, 44, 22);
     opacity: 0.8;
     text-align: center;
+}
+
+h2{
+    padding: 50px;
+    border-radius: 30px;
+    background-color: rgb(222, 222, 222);
+    font-weight: 600;
+    cursor: pointer;
+    margin: auto;
+}
+
+h2:hover{
+    background-color: rgb(97, 106, 117);
+
 }
 
 

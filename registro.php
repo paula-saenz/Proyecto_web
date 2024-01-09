@@ -68,7 +68,7 @@ if (isset($_POST['name'], $_POST['apellidos'], $_POST['edad'], $_POST['direccion
         $result = mysqli_query($connection, $query);
 
         if ($result) {
-            header("Location: dashboard.html");
+            header("Location: dashboard.php");
             exit();
         } else {
             die("Database query failed. " . mysqli_error($connection));

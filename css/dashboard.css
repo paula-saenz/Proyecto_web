@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway:ital,wght@0,900;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+}
+
+body{
+    background-color: rgb(29, 62, 43);
+}
+
+
+a {
+    color:  rgb(2, 27, 5);
+    padding: 20px;
+    
+}
+
+p{
+    margin: 10px;
+}
+
+
+h1{
+    font-size: 5vw;
+    color: #e8f2eb;
+    padding: 10px 0 ;
+}
+
+h2{
+    background-color: #8fffb1;
+    border-radius: 160px;
+    margin: 20px;
+    padding: 70px;
+}
+
+h2:hover{
+    background-color: #579d78;
+    margin: 20px;
+    padding: 70px;
+}
+#header{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 100px;
+    padding: 5px 10%;
+    background-color: rgb(176, 195, 176);
+    z-index: 10;
+
+}
+
+.logo{
+    height: 80px;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    margin:0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(2, 27, 5);
+
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    height: 80px;
+}
+
+label{
+    cursor: pointer;
+    display: none;
+    padding: auto;
+}
+
+.btn{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: rgb(222, 222, 222);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(97, 117, 98);
+
+}
+
+
+#contenido{
+    display: flex;
+    justify-content: space-around;
+    justify-items:center;
+    align-items:center;
+    height: 100vh;
+    
+}
+
+.cajas_texto{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: #8ab89cd3;
+    border-radius: 30px;
+    padding: 90px;
+    
+}
+
+.texto{
+    background-color: rgb(220, 245, 225);
+    border-radius: 30px;
+    padding: 50px;
+    color: #092c0e;
+    opacity: 0.8;
+    text-align: center;
+    transition: .3s;
+
+}
+
+
+
+.bye{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: rgb(174, 26, 26);
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    margin: auto;
+}
+
+.bye:hover {
+    background-color: #a51818;
+}
+
+.min{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-around;
+}
