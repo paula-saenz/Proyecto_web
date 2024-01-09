@@ -3,28 +3,35 @@
 
 *{
     box-sizing: border-box;
+    /*width: 100%;    /*Que no salga linea blanca en el lado derecho
+    height: 100%;*/
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
     list-style: none;
 }
 
+body{
+    width: 100%;    /*Que no salga linea blanca en el lado derecho*/
+    height: 100%;
+}
+
 
 a {
     color: rgb(2, 27, 5);
     padding: 20px;
-    
+    text-decoration: none;
 }
 
 
 h1{
-    font-size: 5vw;
+    font-size: 5vh;
     color: #e8f2eb;
     padding: 10px 0 ;
 }
 
 #header{
-    width: 100vw;
+    width: 100%;
     position: fixed;
     display: flex;
     justify-content:space-between;
@@ -61,6 +68,8 @@ h1{
 
 .menu-icono{
     height: 80px;
+    display: flex;
+    margin-right: 10vh;
 }
 
 label{
@@ -75,6 +84,7 @@ label{
     background-color: rgb(222, 222, 222);
     font-weight: 600;
     cursor: pointer;
+    transition: 0.6s;
 }
 
 .btn:hover{
@@ -121,8 +131,7 @@ label{
 
 #cajita .item1{
     display: flex;
-    background-color: #102c09;
-    opacity: 0.95;
+    background-color: #102c09;;
     padding: 50px;
     border: 3px solid rgb(220, 245, 221);
 }
@@ -133,19 +142,22 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(146, 165, 147);
+    background-color: rgb(155, 175, 156);
     color: #102c09;
+    /*rgb(146, 165, 147)*/
     font-size: large;
     padding: 10px 30px;
     border-radius: 60px;
+    opacity: 0.8l;
 }
 
 #cajita .item2:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #102c09;
-    color: rgb(146, 165, 147);
+    /*background-color: #102c09;
+    color: rgb(146, 165, 147);*/
+    opacity: 0.96;
     font-size: large;
     padding: 10px 30px;
     border-radius: 60px;
