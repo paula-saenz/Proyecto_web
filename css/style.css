@@ -116,6 +116,7 @@ label{
     background-repeat: no-repeat; 
     background-size:cover; 
     justify-content: center;
+    height: 100vh;
 }
 
 #cajita{
