@@ -18,8 +18,8 @@
         </label>
         <ul class="menu">
             <li class="item"><a href="inicio.html"> <b>Inicio</b> </a></li>
-            <li class="item"><a href="#contenido"> <b>Quienes somos</b> </a></li>
-            <li class="item"><a href="#contenido3"> <b>Nuestro Bosque</b> </a></li>
+            <li class="item"><a href="quienes_somos.html"> <b>Quienes somos</b> </a></li>
+            <li class="item"><a href="nuestro_bosque.html"> <b>Nuestro Bosque</b> </a></li>
             <li class="item"><a href="login.html"> <b>Login</b> </a></li>
             <li class="btn"><a href="dashboard.php"><b> DONAR AHORA </b></a></li>
         </ul>
@@ -48,37 +48,29 @@
             $query_info = "SELECT SUM(cantidad_donada) AS total_donado FROM donaciones WHERE id_usuario = (SELECT id_usuario FROM usuarios WHERE username = '$usuario')";
             $result_info = mysqli_query($connection, $query_info);
             $usuario_info = mysqli_fetch_assoc($result_info);
-    
-            if ($usuario_info && $usuario_info['total_donado'] !== null) {
+            $porcentaje_donado = ($usuario_info['total_donado'] * 100) / 2000;
+
+            if ($usuario_info && $usuario_info['total_donado'] != 0) {
                 $total_donado = $usuario_info['total_donado'];
-    
-                echo "<p class='texto'>Has donado un total de $total_donado euros. ¡Gracias por tu apoyo!</p>";
+                echo "<p class='texto'>Has donado un total de $total_donado euros. ¡Gracias por tu apoyo! <br> <br>
+                Has ayudado en un $porcentaje_donado% a acercarnos a nuestro objetivo de 2.000€</p>";
             } else {
-                echo "<p class='texto'>¡Bienvenido a tu panel de donaciones! Aún no has realizado donaciones. ¡Únete y contribuye a nuestra causa!</p>";
+                echo "<p class='texto'>¡Bienvenido a tu panel de donaciones! <br>  Aún no has realizado donaciones. ¡Únete y contribuye a nuestra causa! <br>
+                necesitamos 2.000€ </p>";
             }
             ?>
-                        <div><ul><li class="bye"><a href="cerrar_sesion.php"><b> Cerrar Sesión </b></a></li></ul></div>    
+            
+            <div><ul><li class="bye"><a href="cerrar_sesion.php"><b> Cerrar Sesión </b></a></li></ul></div>    
 
         </div>
 
         <div>
         <div>
-                <h2><a href="donar.html">QUIERO DONAR</a></h2>
-            </div>
-
-
+                <h2 class="donar"><a href="donar.html">QUIERO DONAR</a></h2>
+        </div>
         </div>
 
+    </div> 
 
-
-    </div>
-
-
-
-
-
-    
-    
-    
 </body>
 </html>

@@ -13,9 +13,11 @@ body{
 }
 
 
+
 a {
-    color:  rgb(2, 27, 5);
+    text-decoration: none;
     padding: 20px;
+    text-align: center;
     
 }
 
@@ -31,7 +33,7 @@ h1{
 }
 
 h2{
-    background-color: #8fffb1;
+    background-color: #0d4f04;
     border-radius: 160px;
     margin: 20px;
     padding: 70px;
@@ -64,12 +66,20 @@ h2:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(2, 27, 5);
+
 }
+
 
 .item{
     margin:0 15px;
     font-size: 18px;
     font-weight: 600;
+
+}
+
+.item>a{
+    text-decoration: none;
     color: rgb(2, 27, 5);
 
 }
@@ -98,6 +108,12 @@ label{
 
 .btn:hover{
     background-color: rgb(97, 117, 98);
+
+}
+
+.btn>a{
+    text-decoration: none;
+    color: rgb(2, 27, 5);
 
 }
 
@@ -137,20 +153,78 @@ label{
 .bye{
     padding: 10px 24px;
     border-radius: 30px;
-    background-color: rgb(174, 26, 26);
+    background-color: rgb(91, 28, 28);
     font-weight: 600;
     cursor: pointer;
     text-align: center;
     width: 200px;
     margin: auto;
+
 }
 
 .bye:hover {
-    background-color: #a51818;
+    background-color: #411818;
+}
+
+.bye>a{
+    text-decoration: none;
+    color: rgb(230, 240, 232);
+
 }
 
 .min{
     display: grid;
     grid-template-rows: 1fr 1fr;
     justify-content: space-around;
+}
+
+.donar>a{
+    text-decoration: none;
+    color:#e8f2eb
+}
+
+
+@media screen and (max-width:991px) {
+    .menu{
+        padding: 30px;
+        margin:0;
+    }
+
+    label{
+        display: initial;
+    }
+
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background-color:rgb(176, 195, 176);
+    }
+
+    .item{
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    #contenido{
+        flex-wrap: wrap;
+
+    }
+    
+    .cajas_texto{
+        margin: auto;
+        
+    }
+
+   
+
+    #menu:checked ~ .menu{
+        display: initial    ;
+    }
 }

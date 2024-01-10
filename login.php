@@ -57,12 +57,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $found_user = attempt_login($username, $password, $connection);
 
     if ($found_user) {
-        // Success
         if (password_verify($password, $found_user["contrasena"])) {
             // Configurar variable de sesión
             $_SESSION['username'] = $username;
-
-            // Verificar privilegios
             header("Location: dashboard.php"); // redireccionar a dashboard.php
             exit();
         } else {
@@ -70,8 +67,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             exit();
         }
     } else {
-        // Failure
-        header("Location: inicio.html");
+        header("Location: error_login.html");
         exit();
     }
 }

@@ -23,6 +23,10 @@ a {
     text-decoration: none;
 }
 
+p{
+    padding: 10px;
+}
+
 
 h1{
     font-size: 5vh;
@@ -116,7 +120,6 @@ label{
     background-repeat: no-repeat; 
     background-size:cover; 
     justify-content: center;
-    height: 100vh;
 }
 
 #cajita{
@@ -172,9 +175,9 @@ label{
     justify-content: center;
     justify-items:center;
     align-items:center;
-    height: 90vh;
+    height: 100vh;
     background-color: #102c09;
-    
+    padding: 20px;
 }
 
 .cajas_texto{
@@ -217,8 +220,29 @@ h2:hover{
 
 }
 
+#volver{
+    margin: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(2, 27, 5);
+    background-color: rgb(234, 224, 212);
+    border-radius: 30px;
+}
 
-@media screen and (max-width:991px) {
+.texto .ultimo-parrafo {
+    color:rgb(117, 115, 29); 
+    font-size: 18px;   
+    font-weight: bold;  
+}
+
+@media screen and (max-width:1085px) {
+
+    body{
+        width: auto;
+        height: auto;
+        background-color: #092c0e;
+        margin: 0;
+    }
     .menu{
         padding: 30px;
         margin:0;
@@ -244,6 +268,23 @@ h2:hover{
 
     .btn{
         width: 100%;
+    }
+
+    #contenido{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin:auto;
+        height: auto;
+        padding: 30px;
+    }
+
+    .cajas_texto{
+        margin: auto;
+    }
+
+    img{
+        padding: 20px;
     }
     
     #menu:checked ~ .menu{

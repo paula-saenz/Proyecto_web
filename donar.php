@@ -15,12 +15,10 @@ if (!$connection) {
     die("La conexión con la BBDD ha fallado: " . mysqli_connect_error());
 }
 
-// Simulación de procesamiento de donación
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cantidad_donada = $_POST['cantidad_donada'];
     $usuario = $_SESSION['username'];
 
-    // Validar que la cantidad donada sea válida (puedes realizar más validaciones según tus necesidades)
     if (!is_numeric($cantidad_donada) || $cantidad_donada <= 0) {
         echo "La cantidad donada no es válida.";
         exit;
