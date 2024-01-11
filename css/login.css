@@ -114,3 +114,49 @@ button:hover {
 .link_web:hover {
     text-decoration: underline;
 }
+
+
+@media screen and (max-width:991px) {
+    .menu{
+        padding: 30px;
+        margin:0;
+    }
+
+    label{
+        display: initial;
+    }
+
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background-color:rgb(176, 195, 176);
+    }
+
+    .item{
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    #contenido{
+        flex-wrap: wrap;
+
+    }
+    
+    .cajas_texto{
+        margin: auto;
+        
+    }
+
+   
+
+    #menu:checked ~ .menu{
+        display: initial    ;
+    }
+}
