@@ -135,13 +135,15 @@ label{
 
 #cajita .item1{
     display: flex;
+    justify-content: baseline;
+    text-align: center;
     background-color: #102c09;;
     padding: 50px;
     border: 3px solid rgb(220, 245, 221);
 }
 
 
-#cajita .item2{
+.item2{
     transition: .3s;
     display: flex;
     flex-direction: column;
@@ -153,9 +155,11 @@ label{
     padding: 10px 30px;
     border-radius: 60px;
     opacity: 0.8l;
+    text-align: center;
+    margin: 10px;
 }
 
-#cajita .item2:hover{
+.item2:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,10 +275,10 @@ h2:hover{
     }
 
     #contenido{
-        position: relative;
+        position: absolute;
         display: flex;
         flex-wrap: wrap;
-        margin:auto;
+        margin-top: 50px;
         height: auto;
         padding: 30px;
     }
