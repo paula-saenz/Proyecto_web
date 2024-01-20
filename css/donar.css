@@ -179,9 +179,7 @@ label{
     .cajas_texto{
         margin: auto;
         
-    }
-
-   
+    }   
 
     #menu:checked ~ .menu{
         display: initial    ;

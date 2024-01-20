@@ -37,6 +37,23 @@
         
     </div>
 
+    <script>
+        document.getElementById("donarBtn").addEventListener("click", function (event) {
+            fetch('check_session.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.loggedIn) {
+                        console.log("Usuario inició sesión, permitir donación.");
+                    } else {
+                        event.preventDefault();
+                        alert("Debes iniciar sesión para donar.");
+                        window.location.href = "login.html";
+                    }
+                })
+                .catch(error => console.error('Error al verificar sesión:', error));
+        });
+    </script>
+
     
 </body>
 </html>

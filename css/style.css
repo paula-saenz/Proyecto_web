@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway:ital,wght@1,300&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway:ital,wght@0,900;1,300&display=swap');
+
+
 
 *{
     box-sizing: border-box;
@@ -12,8 +14,9 @@
 }
 
 body{
-    width: 100%;    /*Que no salga linea blanca en el lado derecho*/
-    height: 100%;
+    padding:0;
+    /*width: 100%;
+    height: 100%;*/
 }
 
 
@@ -181,6 +184,28 @@ label{
     align-items:center;
     height: 100vh;
     background-color: #102c09;
+    padding: 20px;
+}
+
+#contenido1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;    
+    justify-items:center;
+    align-items:center;
+    height: 100vh;
+    background-color: #3b6530;
+    padding: 20px;
+}
+
+#contenido2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;    
+    justify-items:center;
+    align-items:center;
+    height: 100vh;
+    background-color: #6a955f;
     padding: 20px;
 }
 
