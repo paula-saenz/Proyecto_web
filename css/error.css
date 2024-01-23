@@ -9,15 +9,13 @@
 }
 
 body{
-    background-color: rgb(29, 62, 43);
+    background-color: rgb(26, 7, 7);
 }
 
 
-
 a {
-    text-decoration: none;
+    color: rgb(27, 2, 2);
     padding: 20px;
-    text-align: center;
     
 }
 
@@ -32,18 +30,6 @@ h1{
     padding: 10px 0 ;
 }
 
-h2{
-    background-color: #0d4f04;
-    border-radius: 160px;
-    margin: 20px;
-    padding: 70px;
-}
-
-h2:hover{
-    background-color: #579d78;
-    margin: 20px;
-    padding: 70px;
-}
 #header{
     width: 100vw;
     position: fixed;
@@ -52,7 +38,7 @@ h2:hover{
     align-items: center;
     height: 100px;
     padding: 5px 10%;
-    background-color: rgb(176, 195, 176);
+    background-color: rgb(200, 99, 99);
     z-index: 10;
 
 }
@@ -66,21 +52,13 @@ h2:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(2, 27, 5);
-
 }
-
 
 .item{
     margin:0 15px;
     font-size: 18px;
     font-weight: 600;
-
-}
-
-.item>a{
-    text-decoration: none;
-    color: rgb(2, 27, 5);
+    color: rgb(27, 2, 2);
 
 }
 
@@ -107,94 +85,61 @@ label{
 }
 
 .btn:hover{
-    background-color: rgb(97, 117, 98);
-
-}
-
-.btn>a{
-    text-decoration: none;
-    color: rgb(2, 27, 5);
+    background-color: rgb(97, 102, 117);
 
 }
 
 
 #contenido{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     justify-items:center;
     align-items:center;
     height: 100vh;
+    background-color: #681111;
     
 }
 
 .cajas_texto{
     text-align: center;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-left: 50px;
-    background-color: #8ab89cd3;
-    border-radius: 30px;
-    padding: 60px;
-    
 }
 
 .texto{
-    background-color: rgb(220, 245, 225);
+    background-color: rgb(220, 226, 245);
     border-radius: 30px;
     padding: 50px;
-    color: #092c0e;
+    color: #09192c;
     opacity: 0.8;
     text-align: center;
     transition: .3s;
 
 }
 
+.texto:hover{
+    background-color: rgb(166, 172, 190);
+    border-radius: 30px;
+    padding: 50px;
+    color: #09192c;
+    opacity: 0.8;
+    text-align: center;
+}
 
 
 .bye{
     padding: 10px 24px;
     border-radius: 30px;
+    background-color: rgb(255, 255, 255);
     font-weight: 600;
     cursor: pointer;
     text-align: center;
-    background-color: rgb(69, 14, 14);
     width: 200px;
     margin: auto;
-
 }
 
-
-.bye>a{
-    text-decoration: none;
-    color: rgb(230, 240, 232);
-
-}
-
-.bye1{
-    padding: 10px 24px;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    background-color: rgb(36, 102, 71);
-    width: 200px;
-    margin: auto;
-
-}
-
-.bye1>a{
-    text-decoration: none;
-    color: rgb(230, 240, 232);
-}
-
-.min{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-around;
-}
-
-.donar>a{
-    text-decoration: none;
-    color:#e8f2eb
+.bye:hover {
+    background-color: #8aa6b8;
 }
 
 
@@ -234,9 +179,7 @@ label{
     .cajas_texto{
         margin: auto;
         
-    }
-
-   
+    }   
 
     #menu:checked ~ .menu{
         display: initial    ;

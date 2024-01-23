@@ -49,10 +49,12 @@
             $result_info = mysqli_query($connection, $query_info);
             $usuario_info = mysqli_fetch_assoc($result_info);
             $porcentaje_donado = ($usuario_info['total_donado'] * 100) / 2000;
+            $arboles_donados = ($usuario_info['total_donado']/2);
 
             if ($usuario_info && $usuario_info['total_donado'] != 0) {
                 $total_donado = $usuario_info['total_donado'];
-                echo "<p class='texto'>Has donado un total de $total_donado euros. ¡Gracias por tu apoyo! <br> <br>
+                echo "<p class='texto'>Has donado un total de $total_donado euros. <br> ¡¡¡Eso significa que has ayudado a 
+                plantar $arboles_donados!!!! <br> <br> ¡Gracias por tu apoyo! <br> <br>
                 Has ayudado en un $porcentaje_donado% a acercarnos a nuestro objetivo de 2.000€</p>";
             } else {
                 echo "<p class='texto'>¡Bienvenido a tu panel de donaciones! <br>  Aún no has realizado donaciones. ¡Únete y contribuye a nuestra causa! <br>
@@ -60,7 +62,10 @@
             }
             ?>
             
-            <div><ul><li class="bye"><a href="cerrar_sesion.php"><b> Cerrar Sesión </b></a></li></ul></div>    
+            <div><ul><li class="bye1"> <a  href="perfil.php"><b> Configuración </b></a></li></ul></div>  
+            <p></p> 
+            <div><ul><li class="bye"> <a  href="cerrar_sesion.php"><b> Cerrar Sesión </b></a></li></ul></div>   
+
 
         </div>
 

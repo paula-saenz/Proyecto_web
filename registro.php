@@ -55,6 +55,7 @@ if (isset($_POST['name'], $_POST['apellidos'], $_POST['edad'], $_POST['direccion
     $found_user = attempt_login($username, $connection);
 
     if ($found_user) {
+        $_SESSION['error_message'] = "El usuario ya existe. Por favor, elige otro nombre de usuario.";
         header("Location: usuario_existe.php");
         exit();
     } else {

@@ -11,6 +11,7 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
     list-style: none;
+    justify-content: center;
 }
 
 body{
@@ -166,8 +167,6 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*background-color: #102c09;
-    color: rgb(146, 165, 147);*/
     opacity: 0.96;
     font-size: large;
     padding: 10px 30px;
@@ -179,7 +178,7 @@ label{
 #contenido{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    justify-content: center;    
     justify-items:center;
     align-items:center;
     height: 100vh;
@@ -301,8 +300,8 @@ h2:hover{
         width: 100%;
     }
 
-    #contenido{
-        position: absolute;
+    #contenido, #contenido1, #contenido2{
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         margin-top: 50px;
