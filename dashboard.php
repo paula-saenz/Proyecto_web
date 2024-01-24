@@ -9,7 +9,7 @@
 <body>
 
     <header id="header">
-        <a href="inicio.html">
+        <a href="index.html">
             <img src="imagenes/logo.png" class="logo" >
         </a> 
         <input type="checkbox" id="menu" />
@@ -17,9 +17,8 @@
             <img src="imagenes/menu.png" alt="menu desplegable" class="menu-icono">
         </label>
         <ul class="menu">
-            <li class="item"><a href="inicio.html"> <b>Inicio</b> </a></li>
+            <li class="item"><a href="index.html"> <b>Inicio</b> </a></li>
             <li class="item"><a href="quienes_somos.html"> <b>Quienes somos</b> </a></li>
-            <li class="item"><a href="nuestro_bosque.html"> <b>Nuestro Bosque</b> </a></li>
             <li class="item"><a href="login.html"> <b>Login</b> </a></li>
             <li class="btn"><a href="dashboard.php"><b> DONAR AHORA </b></a></li>
         </ul>
@@ -54,7 +53,7 @@
             if ($usuario_info && $usuario_info['total_donado'] != 0) {
                 $total_donado = $usuario_info['total_donado'];
                 echo "<p class='texto'>Has donado un total de $total_donado euros. <br> ¡¡¡Eso significa que has ayudado a 
-                plantar $arboles_donados!!!! <br> <br> ¡Gracias por tu apoyo! <br> <br>
+                plantar $arboles_donados árboles!!!! <br> <br> ¡Gracias por tu apoyo! <br> <br>
                 Has ayudado en un $porcentaje_donado% a acercarnos a nuestro objetivo de 2.000€</p>";
             } else {
                 echo "<p class='texto'>¡Bienvenido a tu panel de donaciones! <br>  Aún no has realizado donaciones. ¡Únete y contribuye a nuestra causa! <br>
